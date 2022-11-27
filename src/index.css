@@ -220,8 +220,8 @@ body {
   transform: translate(-2%,-2%);
 }
 .block p {
-  font-weight: 500;
-  font-size: small;
+  font-weight: 700;
+  font-size: 0.8em;
   text-align: center;
 }
 .icon {
@@ -284,11 +284,28 @@ body {
     display: none;
   }
  .interest {
-   transform: translateX(0);
- } 
+   transform: translateX(-10%);
+  animation:interest 2s ease-in ;
+  margin-left: 7%;
 }
-@media (max-width: 556px) {
+  @keyframes interest {
+    0%{
+      opacity: 0;
+      transform: translateX(10%);
+    }
+    50%{
+      opacity: 0.3;
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(-10%);
+    }
+  }
+  
+}
+@media (max-width: 500px) {
   body {
     overflow: hidden;
   }
+  
 }
